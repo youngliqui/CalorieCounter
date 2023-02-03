@@ -40,6 +40,7 @@ public class Main {
             default:
                 System.out.println("Вы выбрали " + userInput);
                 System.out.println("Неверный ввод!");
+                System.out.println("Cool");
                 break;
         }
     }
