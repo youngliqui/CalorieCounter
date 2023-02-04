@@ -1,9 +1,9 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MonthData {
     private String nameOfMonth;
-    private short numberOfDay;
-    private int completedSteps;
+    private int[] completedSteps = new int[30];
 
     MonthData() {
 
@@ -13,22 +13,23 @@ public class MonthData {
         Scanner scanner = new Scanner(System.in);
         nameOfMonth = String.valueOf(Months.values()[numberOfMonth]);
 
+        short numberOfDay;
         do {
             System.out.println("Введите номер дня");
-            numberOfDay = scanner.nextShort();
-        } while(!(numberOfDay <= 30 && numberOfDay > 0));
+            numberOfDay = (short) (scanner.nextShort() - 1);
+        } while(!(numberOfDay <= 29 && numberOfDay >= 0));
 
         do {
             System.out.println("Введите количество пройденных шагов");
-            completedSteps = scanner.nextInt();
-            if (completedSteps < 0) {
+            completedSteps[numberOfDay] = scanner.nextInt();
+            if (completedSteps[numberOfDay] < 0) {
                 System.out.println("Неверный ввод");
             }
-        } while (completedSteps < 0);
+        } while (completedSteps[numberOfDay] < 0);
 
     }
 
-    public String getMonthData(){
-        return nameOfMonth + " " + numberOfDay + " " + completedSteps;
+    public String toString(){
+        return nameOfMonth + "\n" + Arrays.toString(completedSteps);
     }
 }

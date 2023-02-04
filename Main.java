@@ -28,20 +28,16 @@ public class Main {
     private static void functionSelection(int userInput) {
         switch (userInput){
             case 1:
-                System.out.println("Вы выбрали 1");
-                StepTracker.SavingNumberOfStepsPerDay();
+                StepTracker.savingNumberOfStepsPerDay();
                 break;
             case 2:
-                System.out.println("Вы выбрали 2");
+                StepTracker.calculationAndOutputStatistics();
                 break;
             case 3:
-                System.out.println("Вы выбрали 3");
                 break;
             case 0:
-                System.out.println("Вы выбрали 0");
                 break;
             default:
-                System.out.println("Вы выбрали " + userInput);
                 System.out.println("Неверный ввод!");
                 break;
         }

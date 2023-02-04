@@ -11,20 +11,26 @@ public class StepTracker {
         }
     }
 
-    public static void SavingNumberOfStepsPerDay() {
+    public static void savingNumberOfStepsPerDay() {
         Scanner scanner = new Scanner(System.in);
         boolean isGoodInput = false;
 
         do {
             System.out.println("Введите номер месяца: ");
 
-            int userInput = scanner.nextInt();
-            if (userInput >= 0 && userInput <= 12) {
+            int userInput = scanner.nextInt() - 1;
+            if (userInput >= 0 && userInput <= 11) {
                 monthToData.put(userInput, new MonthData(userInput));
                 isGoodInput = true;
-                System.out.println(monthToData.get(userInput));
             }
         } while (!isGoodInput);
 
+    }
+
+    public static void calculationAndOutputStatistics() {
+        for (MonthData i : monthToData.values() )
+        {
+            System.out.println(i);
+        }
     }
 }
