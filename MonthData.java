@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class MonthData {
     private String nameOfMonth;
-    private final int[] completedSteps = new int[30];
+    private static int[] completedSteps = new int[30];
 
     MonthData() {
 
@@ -27,6 +27,10 @@ public class MonthData {
             }
         } while (completedSteps[numberOfDay] < 0);
 
+    }
+
+    public int getCompletedSteps(int index) {
+        return completedSteps[index];
     }
 
     public String toString(){

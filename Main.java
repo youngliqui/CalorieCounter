@@ -34,6 +34,7 @@ public class Main {
                 StepTracker.calculationAndOutputStatistics();
                 break;
             case 3:
+                StepTracker.changingGoalOfSteps();
                 break;
             case 0:
                 break;
