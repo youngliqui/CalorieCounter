@@ -29,6 +29,7 @@ public class Main {
         switch (userInput){
             case 1:
                 System.out.println("Вы выбрали 1");
+                StepTracker.SavingNumberOfStepsPerDay();
                 break;
             case 2:
                 System.out.println("Вы выбрали 2");
