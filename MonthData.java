@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class MonthData {
     private String nameOfMonth;
-    private int[] completedSteps = new int[30];
+    private final int[] completedSteps = new int[30];
 
     MonthData() {
 
