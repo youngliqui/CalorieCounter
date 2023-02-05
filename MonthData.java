@@ -29,6 +29,10 @@ public class MonthData {
 
     }
 
+    public static void addCompletedStepsArray(int[] completedSteps2) {
+        completedSteps = completedSteps2.clone();
+    }
+
     public int getCompletedSteps(int index) {
         return completedSteps[index];
     }

@@ -19,7 +19,8 @@ public class Main {
         System.out.println("""
                 1. Ввести количество шагов за определённый день
                 2. Напечатать статистику за определённый месяц
-                3. Изменить цель по количеству шагов в день
+                3. Ввести данные за весь месяц
+                4. Изменить цель по количеству шагов в день
                 0. Выйти из приложения
 
                 Выберите функцию:\s""");
@@ -34,8 +35,10 @@ public class Main {
                 StepTracker.calculationAndOutputStatistics();
                 break;
             case 3:
-                StepTracker.changingGoalOfSteps();
+                StepTracker.addStepsPerMonth();
                 break;
+            case 4:
+                StepTracker.changingGoalOfSteps();
             case 0:
                 break;
             default:

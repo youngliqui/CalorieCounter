@@ -83,4 +83,23 @@ public class StepTracker {
                 System.out.println("Ошибка ввода!");
         } while(targetNumberOfSteps < 0);
     }
+
+    public static void addStepsPerMonth() {
+        Scanner scanner = new Scanner(System.in);
+        int userInput = 0;
+        do {
+            System.out.println("Введите номер месяца");
+            userInput = scanner.nextInt() - 1;
+        } while (!(userInput <= 11 && userInput >= 0));
+
+        int[] completedSteps = new int[30];
+        System.out.println("Введите количество пройденных шагов");
+        for (int i = 0; i < 30; i++) {
+            do {
+                System.out.println("День " + (i + 1));
+                completedSteps[i] = scanner.nextInt();
+            } while (completedSteps[i] < 0);
+        }
+        MonthData.addCompletedStepsArray(completedSteps);
+    }
 }
